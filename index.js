@@ -11,7 +11,7 @@ var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./models/user'); // get our mongoose model
 
-var port = process.env.PORT || 3000
+var PORT = process.env.PORT || 3000
 mongoose.connect(config.database)
 app.set('superSecret', config.secret)
 
@@ -101,5 +101,5 @@ apiRoutes.get('/users', function(req,res){
   })
 })
 app.use('/api', apiRoutes)
-app.listen(port)
-console.log('Listening at port ' + port + '!!!!!!!!!!')
+app.listen(PORT)
+console.log('Listening at port ' + PORT + '!!!!!!!!!!')
