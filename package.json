@@ -1,17 +1,19 @@
 {
-  "name": "jwt-auth-app",
+  "name": "toy_pulse",
   "version": "1.0.0",
-  "description": "authnenticating w tokens",
+  "description": "an app for toy reviews by kids",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "token",
-    "jwt",
-    "toy_pulse"
+    "toy_pulse",
+    "toy reviews",
+    "kids_reviews",
+    "toys",
+    "kids"
   ],
-  "author": "",
+  "author": "DonaH",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",

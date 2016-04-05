@@ -1,13 +1,13 @@
-angular.module('app',[])
+angular.module('toyPulse',[])
   .factory('authInterceptor', authInterceptor)
   .service('user', userService)
   .service('auth', authService)
   .config(function($httpProvider){
     $httpProvider.interceptors.push('authInterceptor')
   })
-  .controller('Main', MainCtrl)
+  .controller('MainController', MainController)
 
-  function MainCtrl(user, auth){
+  function MainController(user, auth){
     var self = this;
 
     function handleRequest(res){

@@ -1,11 +1,11 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
-module.exports = mongoose.model('User', new Schema({
-  parent_name: String,
-  email: String,
+module.exports = mongoose.model('Starlist', new Schema({
+  rating: String,
+  toy_name: String,
   reviewer: String,     // This is child's name as the kid is the user
-  reviewer2: String,    // Optional
-  password: String,
+  date: String,
+  comment: String,
   admin: Boolean
 }))
