@@ -1,11 +1,10 @@
-var
-  mongoose = require('mongoose'),
-  Schema = mongoose.Schema
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
 
 module.exports = mongoose.model('User', new Schema({
   parent_name: String,
-  child_name: String, // the child is the toy_reviewer
-  email: String,      // parent's email
+  email: String,
+  user: String,     // This is child's name as the kid is the user
   password: String,
   admin: Boolean
 }))
