@@ -28,7 +28,9 @@ app.get('/', function(req,res){
 
 app.get('/setup', function(req,res){
   var dona = new User({
-    name: 'Dona',
+    parent_name: 'Dona',
+    email: 'dona@gmail.com',
+    child: 'Nerissa',
     password: 'password',
     admin: true
   })
