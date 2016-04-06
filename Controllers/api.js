@@ -1,6 +1,8 @@
 var
 	User = require('../models/User.js'),
-	jwt = require('jsonwebtoken')
+	jwt = require('jsonwebtoken'),
+  config = require('../config') // get our config file
+
 
 module.exports = {
 
@@ -56,10 +58,11 @@ module.exports = {
 		User.findOne({email: req.body.email}, function(err, user){
 			if(err) return console.log(err)
 			if(!user) return res.json({success: false, message: "No User Found."})
-			if(user && !user.validPassword(req.body.password)) {
+			// if(user && !user.validPassword(req.body.password)) {
+      if (user && user.password != req.body.password){
 				return res.json({success: false, message: "Wrong password!"})
 			}
-			var token = jwt.sign(user.toObject(), process.env.secret, {
+			var token = jwt.sign(user.toObject(), config.secret, {
 				expiresInMinutes: 1440
 			})
 			res.json({success: true, message: "Boom! Token!", token: token})
