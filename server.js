@@ -22,17 +22,18 @@ app.use(express.static('public'))
 app.use(morgan('dev'))
 
 app.get('/', function(req,res){
-  res.send('Hello! The API is at http://localhost:' + port + '/api')
+  // res.send('Hello! The API is at http://localhost:' + PORT + '/api')
+  res.sendfile(__dirname + '/public/index')
 })
 
 app.get('/setup', function(req,res){
-  var nick = new User({
+  var dona = new User({
     name: 'Dona',
     password: 'password',
     admin: true
   })
 
-  nick.save(function(err){
+  dona.save(function(err){
     if (err) throw err;
     console.log('User saved successfully')
     res.json({ success: true})

@@ -1,4 +1,4 @@
-angular.module('toyPulse',[])
+angular.module('toyPulse',['ui.router'])
   .factory('authInterceptor', authInterceptor)
   .service('user', userService)
   .service('auth', authService)
@@ -7,8 +7,21 @@ angular.module('toyPulse',[])
   })
   .controller('MainController', MainController)
 
-  function MainController(user, auth){
+  function MainController(user, auth, $http){
     var self = this;
+
+    self.getPhotos = function(){
+      console.log("let's get photos")
+
+      $http({
+          url: "https://bingapis.azure-api.net/api/v5/images/search?q=cats&count=9&offset=0&mkt=en-us&safeSearch=Moderate",
+          headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
+          type: "GET"
+      })
+      .then(function(result) {
+          console.log(result.data);
+      });
+    }
 
     function handleRequest(res){
       var token = res.data ? res.data.token : null;
