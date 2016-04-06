@@ -1,8 +1,8 @@
 (function(){
   angular.module('toyPulse',['ui.router'])
-    .factory('authInterceptor', authInterceptor)
-    .service('user', userService)
-    .service('auth', authService)
+    // .factory('authInterceptor', authInterceptor)
+    // .service('user', userService)
+    // .service('auth', authService)
 
     .config(function($httpProvider, $stateProvider, $urlRouterProvider){
 

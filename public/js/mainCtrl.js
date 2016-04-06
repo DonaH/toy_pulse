@@ -3,7 +3,7 @@
 		.controller('MainController', MainController)
 
 	MainController.$inject = ['userService', '$state']
-  $httpProvider.interceptors.push('authInterceptor')
+  // $httpProvider.interceptors.push('authInterceptor')
 
 	function MainController(userService, user, auth, $http, $state){
 		var vm = this
@@ -58,7 +58,7 @@
     user.login(self.email, self.password)
       .then(handleRequest, handleRequest)
   }
-}
+
 
 function userService($http){
   var self = this;

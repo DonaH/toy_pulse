@@ -8,13 +8,13 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script> <!-- jQuery -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script> <!-- Materialize -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script> <!-- Angular -->
+      <script src="js/angular.js"></script>
       <script src="js/angular-ui-router.js"></script>
       <script src="js/app.js"></script>
-      <script src="js/angular.js"></script>
       <script src="js/script.js"></script>
       <script src="js/profileCtrl.js"></script>
       <script src="js/userService.js"></script>
+      <script src="js/mainCtrl.js"></script>
 
   </head>
     <body ng-app="toyPulse" ng-controller="MainController as main">
@@ -32,7 +32,7 @@
 
      <!-- Main Body -->
       <div class="container">
-        <div ng-view> {{(40 + 40) Yo Yo Yo!}} </div>
+        <div ng-view> {{40 + 40}} </div>
         <h1> Welcome to Toy Pulse!</h1>
 
         <input type="text" ng-model="main.name" placeholder="name"><br>
