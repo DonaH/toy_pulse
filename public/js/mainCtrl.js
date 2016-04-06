@@ -5,10 +5,10 @@
 	MainController.$inject = ['userService', '$state']
   // $httpProvider.interceptors.push('authInterceptor')
 
-	function MainController(userService, user, auth, $http, $state){
+	function MainController(userService, $state, auth, $http){
 		var vm = this
 		vm.title = "Angular is working on the backend"
-		vm.newUser = {}
+		vm.newUser = {} // create new user data placeholder
 
 		userService.index().success(function(results){
 			vm.users = results
@@ -17,7 +17,7 @@
 		vm.create = function(){
 			// run the userService create method here.
 			userService.create(vm.newUser).success(function(response){
-				$state.go('detail', {id: response.user._id})
+				$state.go('profile', {id: response.user._id})
 			})
 		}
 

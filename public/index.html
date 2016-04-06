@@ -35,11 +35,11 @@
         <div ng-view> {{40 + 40}} </div>
         <h1> Welcome to Toy Pulse!</h1>
 
-        <input type="text" ng-model="main.name" placeholder="name"><br>
-        <input type="password" ng-model="main.password" placeholder="password"><br>
+        <input type="text" ng-model="main.newUser.name" placeholder="name"><br>
+        <input type="password" ng-model="main.newUser.password" placeholder="password"><br>
         <br>
 
-        <button ng-click="main.signup()">Sign Up</button>
+        <button ng-click="main.create()">Sign Up</button>
         <button ng-click="main.login()">Login</button>
         <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
         <button ng-click="main.getUsers()">get users list</button>

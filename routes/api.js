@@ -18,15 +18,18 @@ var
 // 	.patch(apiCtrl.update)
 // 	.delete(apiCtrl.delete)
 
+//**************************************************/
+// backend routes reference methods in Controllers/api.js
 apiRoutes.post('/authenticate', apiCtrl.authenticate)
 
 apiRoutes.get('/protect', apiCtrl.protect)
 
+apiRoutes.post('/users', apiCtrl.create)
 
 apiRoutes.get('/users', function(req,res){
   User.find({}, function(err, users){
     res.json(users)
   })
 })
-
+///******************* END ROUTES *****************/
 module.exports = apiRoutes

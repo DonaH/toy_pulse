@@ -28,7 +28,7 @@
         .state('profile', {
           url: '/users/:id',
           templateUrl: 'partials/profile.html',
-          controller: 'DetailController as detail'
+          controller: 'MainController as main'
         })
       })
 })()

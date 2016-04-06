@@ -17,7 +17,7 @@ module.exports = {
 	// create new user
 	create: function(req,res){
 		var newUser = new User(req.body)
-		newUser.password = newUser.generateHash(req.body.password)
+    // newUser.password = newUser.generateHash(req.body.password)
 		newUser.save(function(err, user){
 			if(err) return console.log(err)
 			res.json({success: true, message: "User created!", user: user})
