@@ -6,28 +6,32 @@
 
     .config(function($httpProvider, $stateProvider, $urlRouterProvider){
 
-
       $urlRouterProvider.otherwise('/')
 
       // my established routes
       $stateProvider
         .state('home', {
           url: '/',
-          templateUrl: 'partials/home.html'
+          templateUrl: '../partials/home.html'
         })
         .state('newUser', {
           url: '/new',
-          templateUrl: 'partials/new.html',
+          templateUrl: '../partials/new.html',
           controller: 'MainController as main'
         })
         .state('login', {
           url: '/login',
-          templateUrl: 'partials/login.html',
+          templateUrl: '../partials/login.html',
           controller: 'MainController as main'
         })
         .state('profile', {
-          url: '/users/:id',
-          templateUrl: 'partials/profile.html',
+          url: '/profile',
+          templateUrl: '../partials/profile.html',
+          controller: 'MainController as main'
+        })
+        .state('review', {
+          url: '/review',
+          templateUrl: '../partials/add_review.html',
           controller: 'MainController as main'
         })
       })

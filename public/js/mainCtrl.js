@@ -2,10 +2,10 @@
 	angular.module('toyPulse')
 		.controller('MainController', MainController)
 
-	MainController.$inject = ['userService', '$state']
+	MainController.$inject = ['userService', '$state', '$http']
   // $httpProvider.interceptors.push('authInterceptor')
 
-	function MainController(userService, $state, auth, $http){
+	function MainController(userService, $state, $http, auth){
 		var vm = this
 		vm.title = "Angular is working on the backend"
 		vm.newUser = {} // create new user data placeholder

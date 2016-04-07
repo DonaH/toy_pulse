@@ -25,29 +25,27 @@
          <a href="/" class="brand-logo">Toy Pulse!</a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a href="login.html">Login</a></li>
-           <li><a href="signup.html">Sign Up</a></li>
+           <li><a href="new.html">Sign Up</a></li>
          </ul>
        </div>
      </nav>
 
      <!-- Main Body -->
-      <div class="container">
-        <div ng-view> {{40 + 40}} </div>
-        <h1> Welcome to Toy Pulse!</h1>
 
-        <input type="text" ng-model="main.newUser.name" placeholder="name"><br>
+        <div ng-view></div>
+        <!-- <input type="text" ng-model="main.newUser.email" placeholder="parent's email"><br>
+        <input type="text" ng-model="main.newUser.parent_name" placeholder="parent's name"><br>
+        <input type="text" ng-model="main.newUser.child" placeholder="child's name"><br>
         <input type="password" ng-model="main.newUser.password" placeholder="password"><br>
         <br>
-
         <button ng-click="main.create()">Sign Up</button>
         <button ng-click="main.login()">Login</button>
         <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
         <button ng-click="main.getUsers()">get users list</button>
         <button ng-click="main.getPhotos()">get Photos</button>
 
-        <a ui-sref="home">Home</a>
-        <a ui-sref="people">People</a>
-      </div>
+        <a ui-sref="home">Home</a> -->
+
 
       <div class="container">
     		<div ui-view></div>
