@@ -10,11 +10,36 @@ templateUrl: '../partials/add_review.html' -->
     <div class="container">
       <h6>Find the images of the toys I want to comment on</h6><br />
       <label for="search">Search for the name of the toy:</label>
-      <input type="text" />
+      <input type="text" id="search_term" />    <!-- capture user's search_term as query -->
+    </div>
+
+    <button ng-click="main.getPhotos()">get Photos</button> <!-- on click, run the getPhotos function -->
+
+    <div ng-repeat="photos in main.photos">   <!-- populate the thumbnails photos in a div -->
+      <a href target="_blank"><img ng-src="{{photos.thumbnailUrl}}" /></a>
     </div>
 
 
 
+<!-- <script type="text/javascript">
+vm.getPhotos = function(){
+
+var query = document.getElementById("search_term")
+
+  $http({
+      url: '"https://bingapis.azure-api.net/api/v5/images/search?q=+"+query+"+&count=9&offset=0&mkt=en-us&safeSearch=Moderate"',
+      headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
+      type: "GET"
+  })
+  .then(function(result) {
+      console.log(result.data);
+      console.log('should be getting result.data')
+      vm.photos = result.data.value
+  })
+}</script> -->
+
+
+<!--
     <div class="container" id="1">
       <span>Latest review</span><button id="edit">Make changes</button>  <button id="delete">Delete</button>
     </div>
@@ -32,6 +57,6 @@ templateUrl: '../partials/add_review.html' -->
     </div>
     <div class="container" id="6">
       <span>Latest review -5</span><button id="edit">Make changes</button>  <button id="delete">Delete</button>
-    </div>
+    </div> -->
 
 </div>
