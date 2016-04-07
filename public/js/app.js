@@ -1,7 +1,7 @@
 (function(){
   angular.module('toyPulse',['ui.router'])
 
-    .config(function($httpProvider, $stateProvider, $urlRouterProvider){
+    .config(function($stateProvider, $urlRouterProvider){
 
       $urlRouterProvider.otherwise('/')
 

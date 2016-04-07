@@ -38,6 +38,7 @@
       })
       .then(function(result) {
           console.log(result.data);
+					vm.photos = result.data
       })
     }
 
@@ -58,6 +59,9 @@
     user.login(self.email, self.password)
       .then(handleRequest, handleRequest)
   }
+
+	
+
 
 
 function userService($http){
