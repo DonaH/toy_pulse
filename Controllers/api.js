@@ -22,12 +22,6 @@ module.exports = {
 			if(err) return console.log(err)
 			res.json({success: true, message: "User created!", user: user})
 		})
-
-
-		/*User.create(req.body, function(err, user){
-			if(err) return console.log(err)
-			res.json({success: true, message: "User created!", user: user})
-		})*/
 	},
 
 	// show specific user

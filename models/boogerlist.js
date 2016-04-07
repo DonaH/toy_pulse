@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
-module.exports = mongoose.model('Boogerlist', new Schema({
+var boogerSchema = new Schema({
   rating: String,
   toy_name: String,
   reviewer: String,     // This is child's name as the kid is the user
@@ -9,3 +9,7 @@ module.exports = mongoose.model('Boogerlist', new Schema({
   comment: String,
   admin: Boolean
 }))
+
+var Booger = mongoose.model('Booger', boogerSchema)
+
+module.exports = Booger
