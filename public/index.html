@@ -7,17 +7,18 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script> <!-- jQuery -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script> <!-- Materialize -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script> <!-- Materialize -->
       <script src="js/angular.js"></script>
       <script src="js/angular-ui-router.js"></script>
       <script src="js/app.js"></script>
-      <script src="js/script.js"></script>
       <script src="js/profileCtrl.js"></script>
       <script src="js/userService.js"></script>
       <script src="js/mainCtrl.js"></script>
+      <script src="js/globalCtrl.js"></script>
 
   </head>
-    <body ng-app="toyPulse" ng-controller="MainController as main">
+    <body ng-app="toyPulse" ng-controller="MainController as main" ng-style="{'background-image':'url(images/FUN.jpg)'}">
+
 
       <!-- Nav Bar -->
      <nav class="#ff9800 orange" role="navigation">
@@ -53,5 +54,6 @@
       <!-- Footer -->
       <div class="footer">About | Contacts | FAQ | Disclaimer | Copyright 2016</div>
 
+    <script src="js/script.js"></script>
     </body>
 </html>

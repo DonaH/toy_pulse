@@ -1,11 +1,11 @@
+<!-- TODO login form-->
 <div class="container">
   <h1>Login</h1>
 
-  <input type="text" ng-model="main.newUser.email" placeholder="Parent's email"><br>
-  <input type="text" ng-model="main.newUser.child" placeholder="Child's name"><br>
-  <input type="password" ng-model="main.newUser.password" placeholder="Password"><br>
+  <input type="text" ng-model="global.loginUser.email" placeholder="Parent's email"><br>
+  <input type="password" ng-model="global.loginUser.password" placeholder="Password"><br>
   <br>
 
-  <button ng-click="main.authenticate()">Let's Go!</button>
+  <button ng-click="global.login()">Let's Go!</button>
 
 </div>

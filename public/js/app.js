@@ -19,7 +19,7 @@
         .state('login', {
           url: '/login',
           templateUrl: '../partials/login.html',
-          controller: 'MainController as main'
+          controller: 'GlobalController as global'
         })
         .state('profile', {
           url: '/profile',

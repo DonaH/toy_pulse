@@ -8,3 +8,7 @@
 //         $('nav').removeClass('opaque');
 //     }
 // });
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
