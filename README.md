@@ -1,6 +1,9 @@
 # [Toy Pulse App](https://toy-pulse.herokuapp.com/)
 ### An App for Kids, NOT parents to make and share toy reviews. Afterall it's kids who're playing with the toys, at least most of the time. Kids can pull pictures from our api and share what they like about the toys & what they don't like about them.
 
+![screenshot](/public/images/screenshot.png)
+
+
 # Purpose
 ### Kids' voice matters, what kids play matters and their opinions should be taken into account when parents make decisions on what toys to purchase for the brilliant minds.
 
@@ -29,6 +32,6 @@
 ### Your page should show up nicely.
 
 # Contacts
-* if you have questions please post it on github or contact me directly at my email: dona.hsieh@gmail.com
+* if you have questions please post it on github or contact me directly at my email <dona.hsieh@gmail.com>
 
 ### Happy coding!
