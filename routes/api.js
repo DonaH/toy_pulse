@@ -33,11 +33,11 @@ var
 // })
 ///******************* END ROUTES *****************/
 // module.exports = apiRoutes
-
-var
-	express = require('express'),
-	apiRouter = express.Router(),
-	apiCtrl = require('../controllers/api.js')
+//
+// var
+// 	express = require('express'),
+// 	apiRouter = express.Router(),
+// 	apiCtrl = require('../controllers/api.js')
 
 
 apiRouter.post('/authenticate', apiCtrl.authenticate)
