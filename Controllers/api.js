@@ -1,5 +1,5 @@
 var
-	User = require('../models/User.js'),
+	User = require('../models/user.js'),
 	jwt = require('jsonwebtoken'),
   config = require('../config') // get our config file
 
