@@ -1,6 +1,6 @@
 var
 	express = require('express'),
-	apiRoutes = express.Router(),
+	apiRouter = express.Router(),
 	apiCtrl = require('../Controllers/api.js'),
   User = require('../models/user.js')
 
