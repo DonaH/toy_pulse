@@ -1,7 +1,7 @@
 var
 	express = require('express'),
 	apiRoutes = express.Router(),
-	apiCtrl = require('../controllers/api.js'),
+	apiCtrl = require('../Controllers/api.js'),
   User = require('../models/user.js')
 
 
