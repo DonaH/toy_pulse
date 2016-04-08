@@ -1,8 +1,8 @@
 var
 	express = require('express'),
 	apiRoutes = express.Router(),
-	apiCtrl = require('../controllers/api.js')
-  User = require('../models/User.js')
+	apiCtrl = require('../controllers/api.js'),
+  User = require('../models/user.js')
 
 
 // apiRouter.post('/authenticate', apiCtrl.authenticate)

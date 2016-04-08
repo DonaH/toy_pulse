@@ -3,7 +3,7 @@ var
 	apiReviewRouter = express.Router(),
   // apiCtrl = require('../controllers/api.js')
 	apiReviewCtrl = require('../controllers/apiReview.js'),
-  // User = require('../models/User.js')
+  // User = require('../models/user.js')
   Star = require('../models/starlist.js')
 
 
