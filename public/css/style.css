@@ -4,15 +4,17 @@
 
 /*nav {opacity:0.5;transition:opacity 0.3s;}
 nav.opaque {opacity:1;}*/
-
+h1{
+  align-items: center;
+}
 .footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  /*background-color: rgba(255, 152, 0, 1);*/
-  background-color: rbga(#FFF, 0.5)
+  background-color: rgba(255, 152, 0, 1);
+  /*background-color: rbga(#FFF, 0.5)*/
   text-align: center;
   font-size: 12px;
 }
@@ -27,7 +29,7 @@ nav.opaque {opacity:1;}*/
 }
 
 .thumb-container {
-  width: 330px;
+  width: 400px;
 }
 
 .ib {

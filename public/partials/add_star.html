@@ -4,13 +4,19 @@ templateUrl: '../partials/add_star.html -->
 <div class="container">
   <h2>Create review for your star toy!</h2>
 
-  <img />
+
+<div class="Temp-Photo-Container col s6">
+    <button ng-click="main.loadTempPhoto()">show Photo</button>
+</div>
+
+
+
   <h6>Toy Name: </h6>  <input type="textbox" />
   <form action="/my-handling-form-page" method="post">
-      <div>
+      <!-- <div>
           <label for="starlist">Starlist:</label>
           <input type="text" id="star" />
-      </div>
+      </div> -->
       <div>
           <label for="toy name">Toy Name:</label>
           <input type="text" id="toy_name" />
@@ -27,7 +33,7 @@ templateUrl: '../partials/add_star.html -->
           <label for="comment">What do you like about this toy?</label>
           <textarea id="comment"></textarea>
       </div>
-      <!-- <button type="submit" ng-click=""></button> -->
+      <button type="submit" ng-click="createReview"></button>
   </form>
   </li>
 </div>

@@ -8,23 +8,29 @@ templateUrl: '../partials/add_review.html' -->
 
     <!-- hold all reviews of the login user -->
     <div class="container">
-      <h6>Find the images of the toys I want to comment on</h6><br />
+      <h5>Find the images of the toys I want to comment on</h5><br />
       <label for="search">Search for the name of the toy:</label>
       <input type="text" id="search_term" />    <!-- capture user's search_term as query -->
     </div>
 
     <button ng-click="main.getPhotos()">get Photos</button> <!-- on click, run the getPhotos function -->
+
   <div class="row">
     <div class="thumb-container col s6" >
       <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
+
         <a ng-click="main.choosePhoto(photo)" href target="_blank">
           <img ng-src="{{photo.thumbnailUrl}}" class="thumb" />
         </a>
       </div>
     </div>
+
     <div class="col s6">
       <img ng-src={{main.chosen}} />
     </div>
+
+    <button ng-click="main.gotoComment()">Go add comment</button>
+
   </div>
 
 

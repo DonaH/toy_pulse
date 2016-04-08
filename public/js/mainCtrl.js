@@ -2,10 +2,10 @@
 	angular.module('toyPulse')
 		.controller('MainController', MainController)
 
-	MainController.$inject = ['userService', '$state', '$http']
+	MainController.$inject = ['userService', '$state', '$http', '$window', 'auth']
   // $httpProvider.interceptors.push('authInterceptor')
 
-	function MainController(userService, $state, $http, auth){
+	function MainController(userService, $state, $http, $window, auth){
 		var vm = this
 		vm.title = "Angular is working on the backend"
 		vm.newUser = {} // create new user data placeholder
@@ -48,8 +48,28 @@
 		vm.choosePhoto = function(photo){
 			console.log(photo)
 			vm.chosen= photo.thumbnailUrl
+			var img_url = vm.chosen
+			$window.localStorage.setItem('img_url', img_url)
+		}
+		vm.gotoComment = function(){
+			$state.go('star')
+			// Load the img in localStorage to the next page: add_star.html
+			// window.onload = function() {
+			// 	var picutre = localStorage.getItem('img_url')
+			// 	var image = document.createElement('img');
+			// 	image.src = pictures;
+			// 	document.body.appendChild(image)
+			// }
 		}
 
+		vm.loadTempPhoto = function(){
+			$window.localStorage.getItem('img_url');
+			   var picture = localStorage.getItem('img_url');
+			   var image = document.createElement('img');
+			   image.src = picture;
+			   document.body.appendChild(image);
+				 $window.localStorage.setItem('img_url', null)
+		}
 
 	}
 })()
