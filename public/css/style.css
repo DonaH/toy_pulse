@@ -20,3 +20,16 @@ nav.opaque {opacity:1;}*/
 .parallax-container {
   height: "450";
 }
+
+.thumb {
+  height: 100px;
+  display: inline-block;
+}
+
+.thumb-container {
+  width: 330px;
+}
+
+.ib {
+  display: inline-block;
+}

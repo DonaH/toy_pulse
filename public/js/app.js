@@ -24,7 +24,7 @@
         .state('profile', {
           url: '/profile',
           templateUrl: '../partials/profile.html',
-          controller: 'MainController as main'
+          controller: 'ProfileController as profile'
         })
         .state('review', {
           url: '/review',

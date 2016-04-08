@@ -31,6 +31,8 @@
             var token = res.data ? res.data.token : null;
             if(token) { console.log('JWT:', token); }
             vm.message = res.data.message;
+            // need to return to the listing page
+            $state.go('listing')
         }
 
         vm.login = function() {
@@ -72,7 +74,6 @@
                 if(res.data.token) {
                     auth.saveToken(res.data.token);
                 }
-
                 return res;
             },
         }

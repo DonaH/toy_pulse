@@ -14,10 +14,24 @@ templateUrl: '../partials/add_review.html' -->
     </div>
 
     <button ng-click="main.getPhotos()">get Photos</button> <!-- on click, run the getPhotos function -->
-
-    <div ng-repeat="photos in main.photos">   <!-- populate the thumbnails photos in a div -->
-      <a href target="_blank"><img ng-src="{{photos.thumbnailUrl}}" /></a>
+  <div class="row">
+    <div class="thumb-container col s6" >
+      <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
+        <a ng-click="main.choosePhoto(photo)" href target="_blank">
+          <img ng-src="{{photo.thumbnailUrl}}" class="thumb" />
+        </a>
+      </div>
     </div>
+    <div class="col s6">
+      <img ng-src={{main.chosen}} />
+    </div>
+  </div>
+
+
+
+
+
+
 
 
 

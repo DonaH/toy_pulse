@@ -4,12 +4,12 @@ templateUrl: '../partials/profile.html' -->
 <div class="container">
   <h1>Your Profile</h1>
 
-  <input type="text" ng-model="main.newUser.email" placeholder="Parent's email"><br>
-  <input type="text" ng-model="main.newUser.parent_name" placeholder="Parent's name"><br>
-  <input type="text" ng-model="main.newUser.child" placeholder="Child's name"><br>
-  <input type="password" ng-model="main.newUser.password" placeholder="Password"><br>
+  <input type="text" ng-model="profile.user.email" placeholder="Parent's email"><br>
+  <input type="text" ng-model="profile.user.parent_name" placeholder="Parent's name"><br>
+  <input type="text" ng-model="profile.user.child" placeholder="Child's name"><br>
+  <input type="password" ng-model="profile.user.password" placeholder="Password"><br>
   <br>
 
-  <button ng-click="main.update()">Update my info!</button>
+  <button ng-click="profile.edit()">Update my info!</button>
 
 </div>
