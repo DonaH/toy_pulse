@@ -71,5 +71,29 @@
 				 $window.localStorage.setItem('img_url', null)
 		}
 
+	vm.toyReview = {
+		img_url: vm.img_url,
+	  toy_name: vm.toy_name,
+	  reviewer: vm.reviewer,     // This is child's name as the kid is the user
+	  date: vm.date,
+	  comment: vm.comment
+	}
+
+
+	vm.createReview = function(){
+		console.log("TESTIIIIII")
+		console.log(vm.toy_name)
+		console.log(vm.toyReview)
+		userService.review({
+			img_url: vm.img_url,
+			toy_name: vm.toy_name,
+			reviewer: vm.reviewer,     // This is child's name as the kid is the user
+			date: vm.date,
+			comment: vm.comment
+		}).success(function(results){
+			vm.review = results
+		})
+	}
+
 	}
 })()

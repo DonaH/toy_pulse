@@ -9,8 +9,8 @@ var starSchema = new Schema({
   date: String,
   comment: String,
   admin: Boolean
-}))
+})
 
-var User = mongoose.model('Star', starSchema)
+var Star = mongoose.model('Star', starSchema)
 
 module.exports = Star

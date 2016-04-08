@@ -10,28 +10,28 @@ templateUrl: '../partials/add_star.html -->
 
 
 
-  <form action="/my-handling-form-page" method="post">
+  <form >
       <!-- <div>
           <label for="starlist">Starlist:</label>
           <input type="text" id="star" />
       </div> -->
       <div>
           <label for="toy name">Toy Name:</label>
-          <input type="text" id="toy_name" />
+          <input ng-model="main.toy_name" type="text" id="toy_name" />
       </div>
       <div>
           <label for="toy reviewer">Toy Reviewer:</label>
-          <input type="text" id="toy_reviewer" />
+          <input ng-model="main.reviewer" type="text" id="toy_reviewer" />
       </div>
       <div>
           <label for="date">Date:</label>
-          <input type="Date" id="date" />
+          <input ng-model="main.date" type="Date" id="date" />
       </div>
       <div>
           <label for="comment">What do you like about this toy?</label>
-          <textarea id="comment"></textarea>
+          <textarea ng-model="main.comment" id="comment"></textarea>
       </div>
-      <button type="submit" ng-click="createReview">Save my Review</button>
+      <button type="submit" ng-click="main.createReview()">Save my Review</button>
   </form>
   </li>
 </div>

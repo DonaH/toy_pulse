@@ -1,10 +1,10 @@
 <!-- url: '/listing',
 templateUrl: '../partials/listing.html' -->
-<div class="container">
+<div class="container" ng-controller="MainController as main">
 <h2>All the reviews of the star and booger toys!</h2>
 <br />
   <!-- hold all reviews of ALL users-->
-
+{{main.review.reviewer}}
 <ul>
   <li><h5>Review 1</h5><button id="edit"  ng-click=""><i class="material-icons">mode_edit</i></button>
     <button id="delete" ng-click=""><i class="material-icons">delete</button>

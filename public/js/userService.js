@@ -11,7 +11,8 @@
 			show: show,
 			create: create,
 			update: update,
-			destroy: destroy
+			destroy: destroy,
+			review: review
 		}
 		return service
 
@@ -34,6 +35,9 @@
 
 		function destroy(id){
 			return $http.delete(apiUrl + id)
+		}
+		function review(data){
+			return $http.post("/apiReview/reviews", data)
 		}
 	}
 })()
