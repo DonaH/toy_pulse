@@ -5,13 +5,11 @@ templateUrl: '../partials/add_star.html -->
   <h2>Create review for your star toy!</h2>
 
 
-<div class="Temp-Photo-Container col s6">
-    <button ng-click="main.loadTempPhoto()">show Photo</button>
-</div>
+<div class="Temp-Photo-Container col s6" style="float:right">
+    <button ng-click="main.loadTempPhoto()">Click here for Photo</button>
 
 
 
-  <h6>Toy Name: </h6>  <input type="textbox" />
   <form action="/my-handling-form-page" method="post">
       <!-- <div>
           <label for="starlist">Starlist:</label>
@@ -33,7 +31,8 @@ templateUrl: '../partials/add_star.html -->
           <label for="comment">What do you like about this toy?</label>
           <textarea id="comment"></textarea>
       </div>
-      <button type="submit" ng-click="createReview"></button>
+      <button type="submit" ng-click="createReview">Save my Review</button>
   </form>
   </li>
+</div>
 </div>

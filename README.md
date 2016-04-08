@@ -1,5 +1,8 @@
-# Toy Pulse App
-### Description
+# [Toy Pulse App](https://toy-pulse.herokuapp.com/)
+### An App for Kids to make and share their own toy reviews, NOT parents! Kids can pull pictures from our api and share what they like about the toys & what they don't like about them. 
+
+# Purpose
+### Kids voice matters, what kids play matters and their opinions should be taken into account when parents make decisions on what purchasing toys to simulate the brillant minds.
 
 # Wireframes
 <p align="center">
@@ -14,4 +17,19 @@
   <img src="/public/images/toy_pulse_wireframe update profile.png" width="1024"/>
 </p>
 
-# [Trello link](http://url.com/ "Title")
+# [Trello link](https://trello.com/b/6ohdgIEn/toy-pulse)
+
+# Setup
+### 1. git clone all files from this repo
+### 2. cd into that folder.
+### 3. run 'npm install' on your command line
+### 4. start your server by running 'node server.js'
+### 5. open up your browser and type 'http://localhost:3000/' in the address bar.
+
+### Your page should show up nicely.
+
+# Contacts
+* if you have questions please post it in github or contact me directly at my email: dona.hsieh@gmail.com
+
+### Happy coding!
+
