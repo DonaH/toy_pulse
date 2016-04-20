@@ -46,6 +46,11 @@
           templateUrl: '../partials/listing.html',
           controller: 'MainController as main'
         })
+        .state('list', {
+          url: '/listing',
+          templateUrl: '../partials/listing.html',
+          controller: 'MainController as main'
+        })
         .state('logoff', {
           url: '/logoff',
           templateUrl: '../partials/logoff.html',

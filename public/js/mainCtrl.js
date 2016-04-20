@@ -71,8 +71,6 @@
 			//  localStorage.clear();
 		}
 
-
-
 	vm.createReview = function(){
 		vm.review = {
 			img_url: $window.localStorage.getItem('img_url'),
@@ -87,20 +85,20 @@
 		console.log(vm.review)
 		userService.review(vm.review).success(function(results){
 			console.log(results)
+				$state.go('list')
 			  localStorage.clear();
 
 			// vm.review = results
-			$state.go('listing')
+
 		})
 	}
 	vm.destroyReview = function(id, index){
 		console.log("pass destroy review")
-		userService.destroy($stateParams.id).success(function(response){
+		userService.destroy(id).success(function(response){
 			console.log(response)
 			vm.reviews.splice(index, 1)
 		})
-		console.log($stateParams)
-
+		console.log(id)
 
 	}
 

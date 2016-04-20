@@ -1,25 +1,35 @@
 <!-- url: '/listing',
 templateUrl: '../partials/listing.html' -->
-<div class="container">
+<!-- <div class="container"> -->
 <h2>All the reviews of the star and booger toys!</h2>
 <br />
   <!-- hold all reviews of ALL users-->
 <ul ng-repeat="r in global.allReviews | orderBy: '-date'">
   <li>
-    <img ng-src="{{r.img_url}}">
+    <div >
+      <table  style="width:90%"
+        <tr>
+          <td><img width="300px" ng-src="{{r.img_url}}" class="clearfix float-my-children" ></td>
+          <td>
+              <h6>Toy Name: {{r.toy_name}} </h6><br />
+              <h6>This belongs to Boogerlist: {{r.boogerlist}} </h6><br />
+              <h6>Reviewer: {{r.reviewer}} </h6><br />
+              <h6>Comment: {{r.comment}}</h6>
+          </td>
+        </tr>
+      </table>
 
-    <h5>Toy Name: {{r.toy_name}} </h5>&nbsp;
-    <h5>This belongs to Boogerlist: {{r.boogerlist}} </h5>&nbsp;
-    <h5>Reviewer: {{r.reviewer}} </h5>&nbsp;
-    <h5>Comment: {{r.comment}}</h5>
 
+
+    </div>
+
+
+
+<!--
     <button id="edit"  ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click="main.destroyReview({toy: '123'})"><i class="material-icons">delete</button>
+    <button id="delete" ng-click="main.destroyReview(r._id, $index)"><i class="material-icons">delete</button> -->
   </li>
 </ul>
-<ul>
-  <li><h5>Review 1</h5>
-    </li>
-</ul>
 
-</div>
+
+<!-- </div> -->

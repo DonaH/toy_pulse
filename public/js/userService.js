@@ -44,7 +44,7 @@
 			return $http.get("/apiReview/reviews")
 		}
 		function destroyReview(id){
-			return $http.delete("/apiReview/reviews/"+ id)
+			return $http.delete("/apiReview/reviews/" + id)
 		}
 	}
 })()
