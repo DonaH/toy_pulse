@@ -8,6 +8,7 @@ var
 
 
 apiReviewRouter.post('/reviews', apiReviewCtrl.create)
-
+apiReviewRouter.get('/reviews', apiReviewCtrl.indexReview)
+apiReviewRouter.delete('/reviews/:id', apiReviewCtrl.deleteReview)
 
 module.exports = apiReviewRouter

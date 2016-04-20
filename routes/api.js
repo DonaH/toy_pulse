@@ -46,7 +46,7 @@ apiRouter.route('/users')
 	.get(apiCtrl.index)
 	.post(apiCtrl.create)
 
-apiRouter.use(apiCtrl.protect)
+// apiRouter.use(apiCtrl.protect)
 
 apiRouter.route('/users/:id')
 	.get(apiCtrl.show)

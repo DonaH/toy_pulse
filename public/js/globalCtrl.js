@@ -9,12 +9,20 @@
         .service('auth', authService)
         .constant('API', '/api')
 
-    GlobalController.$inject = ['auth', 'user', '$rootScope', '$state']
+    GlobalController.$inject = ['auth', 'user', '$rootScope', '$state','userService']
 
-    function GlobalController(auth, user, $rootScope, $state){
+    function GlobalController(auth, user, $rootScope, $state, userService){
       console.log('global controller instantiated')
         var vm = this
         vm.title = "This Is The Global Controller!"
+        vm.allReview = function(){
+          console.log("see all ")
+          userService.allReview().success(function(res){
+
+            vm.allReviews = res
+            console.log(vm.allReviews)
+          })
+        }
 
         vm.loginUser = {}
 
@@ -61,7 +69,7 @@
             // automatically attach Authorization header
             request: function(config) {
                 var token = auth.getToken();
-                console.log(config.url.indexOf(API))
+                // console.log(config.url.indexOf(API))
                 if(token) {
                     config.headers['x-access-token'] = token;
                 }
@@ -129,4 +137,5 @@
         };
 
     }
+
 })()

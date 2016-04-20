@@ -11,8 +11,9 @@ var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 // var User   = require('./models/user'); // get our mongoose model
 var apiCtrl = require('./Controllers/api');
-var apiRoutes = require('./routes/api')
-var apiReviewRoutes = require('./routes/apiReview')
+var apiReviewCtrl = require('./Controllers/apiReview');
+var apiRoutes = require('./routes/api');
+var apiReviewRoutes = require('./routes/apiReview');
 
 var PORT = process.env.PORT || 3000
 mongoose.connect(config.database)
@@ -26,7 +27,7 @@ app.use(morgan('dev'))
 
 app.get('/', function(req,res){
   // res.send('Hello! The API is at http://localhost:' + PORT + '/api')
-  res.sendfile(__dirname + '/public/index')
+  res.sendfile(__dirname + '/public/index.html')
 })
 
 app.use('/api', apiRoutes)

@@ -5,11 +5,18 @@ var
 
 module.exports = {
 
-	// list all reviews
+	// list all users
 	index: function(req,res){
 		User.find({}, function(err, reviews){
 			if(err) return console.log(err)
 			res.json(reviews)
+		})
+	},
+	// delete a user
+	delete: function(req,res){
+		User.findOneAndRemove({_id: req.params.id}, function(err){
+			if(err) return console.log(err)
+			res.json({success: true, message: "Review Deleted!"})
 		})
 	},
 
@@ -30,21 +37,27 @@ module.exports = {
 			res.json(review)
 		})
 	},
-
-	// update a review
-	update: function(req,res){
-		User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, review){
+	// list all reviews
+	indexReview: function(req,res){
+		Review.find({}, function(err, reviews){
 			if(err) return console.log(err)
-			res.json({success: true, message: "Review updated!", review: review})
+			res.json(reviews)
+		})
+	},
+	deleteReview: function(req,res){
+		Review.findByIdAndRemove(req.params.id, function(err){
+			res.json({success: true, message: "Review deleted!"})
 		})
 	},
 
-	// delete a review
-	delete: function(req,res){
-		User.findOneAndRemove({_id: req.params.id}, function(err){
+	// update a review
+	update: function(req,res){
+		Review.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, review){
 			if(err) return console.log(err)
-			res.json({success: true, message: "Review Deleted!"})
+			res.json({success: true, message: "Review updated!", review: review})
 		})
 	}
+
+
 
 }

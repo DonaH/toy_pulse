@@ -1,40 +1,25 @@
 <!-- url: '/listing',
 templateUrl: '../partials/listing.html' -->
-<div class="container" ng-controller="MainController as main">
+<div class="container">
 <h2>All the reviews of the star and booger toys!</h2>
 <br />
   <!-- hold all reviews of ALL users-->
-{{main.review.reviewer}}
-<ul>
-  <li><h5>Review 1</h5><button id="edit"  ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
-<ul>
-  <li><h5>Review 2</h5><button id="edit" ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
-<ul>
-  <li><h5>Review 3</h5><button id="edit" ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
-<ul>
-  <li><h5>Review 4</h5><button id="edit" ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
-<ul>
-  <li><h5>Review 5</h5><button id="edit" ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
-<ul>
-  <li><h5>Review 6</h5><button id="edit" ng-click=""><i class="material-icons">mode_edit</i></button>
-    <button id="delete" ng-click=""><i class="material-icons">delete</button>
-    </li>
-</ul>
+<ul ng-repeat="r in global.allReviews | orderBy: '-date'">
+  <li>
+    <img ng-src="{{r.img_url}}">
 
+    <h5>Toy Name: {{r.toy_name}} </h5>&nbsp;
+    <h5>This belongs to Boogerlist: {{r.boogerlist}} </h5>&nbsp;
+    <h5>Reviewer: {{r.reviewer}} </h5>&nbsp;
+    <h5>Comment: {{r.comment}}</h5>
+
+    <button id="edit"  ng-click=""><i class="material-icons">mode_edit</i></button>
+    <button id="delete" ng-click="main.destroyReview({toy: '123'})"><i class="material-icons">delete</button>
+  </li>
+</ul>
+<ul>
+  <li><h5>Review 1</h5>
+    </li>
+</ul>
 
 </div>

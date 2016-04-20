@@ -12,7 +12,8 @@
 			create: create,
 			update: update,
 			destroy: destroy,
-			review: review
+			review: review,
+			allReview: allReview
 		}
 		return service
 
@@ -38,6 +39,12 @@
 		}
 		function review(data){
 			return $http.post("/apiReview/reviews", data)
+		}
+		function allReview(){
+			return $http.get("/apiReview/reviews")
+		}
+		function destroyReview(id){
+			return $http.delete("/apiReview/reviews/"+ id)
 		}
 	}
 })()

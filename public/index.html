@@ -17,7 +17,7 @@
       <script src="js/globalCtrl.js"></script>
 
   </head>
-    <body ng-app="toyPulse" ng-controller="MainController as main" ng-style="{'background-image':'url(images/cat.jpg)'}">
+    <body ng-app="toyPulse" ng-controller="GlobalController as global" ng-style="{'background-image':'url(images/cat.jpg)'}">
 
 
       <!-- Nav Bar -->
@@ -26,10 +26,10 @@
          <a ui-sref="home" class="brand-logo">Toy Pulse!</a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a ui-sref="review">Review</a></li>
-           <li><a ui-sref="listing">Listing</a></li>
+           <li><a ui-sref="listing" ng-click="global.allReview()">Listing</a></li>
            <li><a ui-sref="login">Login</a></li>
            <li><a ui-sref="newUser">Sign Up</a></li>
-           <li><a ui-sref="login">Logout</a></li>
+           <li><a ui-sref="logoff" ng-click="global.logout()">Logout</a></li>
 
          </ul>
        </div>

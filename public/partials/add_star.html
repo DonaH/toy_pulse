@@ -5,16 +5,22 @@ templateUrl: '../partials/add_star.html -->
   <h2>Create review for your star toy!</h2>
 
 
-<div class="Temp-Photo-Container col s6" style="float:right">
+<div class="Temp-Photo-Container col-4" style="float:right">
     <button ng-click="main.loadTempPhoto()">Click here for Photo</button>
 
-
-
-  <form >
+  <form>
       <!-- <div>
           <label for="starlist">Starlist:</label>
           <input type="text" id="star" />
       </div> -->
+      <div class="switch">
+        <label>
+        Starlist
+          <input type="checkbox" ng-model="main.isBooger"/>
+        <span class="lever"></span>
+        Boogerlist</label>
+      </div>
+
       <div>
           <label for="toy name">Toy Name:</label>
           <input ng-model="main.toy_name" type="text" id="toy_name" />
@@ -33,6 +39,6 @@ templateUrl: '../partials/add_star.html -->
       </div>
       <button type="submit" ng-click="main.createReview()">Save my Review</button>
   </form>
-  </li>
+
 </div>
 </div>

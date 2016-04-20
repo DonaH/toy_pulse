@@ -2,10 +2,10 @@
 	angular.module('toyPulse')
 		.controller('MainController', MainController)
 
-	MainController.$inject = ['userService', '$state', '$http', '$window', 'auth']
+	MainController.$inject = ['userService', '$state', '$http', '$window', 'auth', '$stateParams']
   // $httpProvider.interceptors.push('authInterceptor')
 
-	function MainController(userService, $state, $http, $window, auth){
+	function MainController(userService, $state, $http, $window, auth, $stateParams){
 		var vm = this
 		vm.title = "Angular is working on the backend"
 		vm.newUser = {} // create new user data placeholder
@@ -64,36 +64,46 @@
 
 		vm.loadTempPhoto = function(){
 			$window.localStorage.getItem('img_url');
-			   var picture = localStorage.getItem('img_url');
-			   var image = document.createElement('img');
-			   image.src = picture;
-			   document.body.appendChild(image);
-				 $window.localStorage.setItem('img_url', null)
+		   var picture = localStorage.getItem('img_url');
+		   var image = document.createElement('img');
+		   image.src = picture;
+		   document.body.appendChild(image);
+			//  localStorage.clear();
 		}
 
-	vm.toyReview = {
-		img_url: vm.img_url,
-	  toy_name: vm.toy_name,
-	  reviewer: vm.reviewer,     // This is child's name as the kid is the user
-	  date: vm.date,
-	  comment: vm.comment
-	}
 
 
 	vm.createReview = function(){
+		vm.review = {
+			img_url: $window.localStorage.getItem('img_url'),
+		  toy_name: vm.toy_name,
+		  reviewer: vm.reviewer,     // This is child's name as the kid is the user
+		  date: vm.date,
+		  comment: vm.comment,
+			boogerlist: vm.isBooger
+		}
 		console.log("TESTIIIIII")
 		console.log(vm.toy_name)
-		console.log(vm.toyReview)
-		userService.review({
-			img_url: vm.img_url,
-			toy_name: vm.toy_name,
-			reviewer: vm.reviewer,     // This is child's name as the kid is the user
-			date: vm.date,
-			comment: vm.comment
-		}).success(function(results){
-			vm.review = results
+		console.log(vm.review)
+		userService.review(vm.review).success(function(results){
+			console.log(results)
+			  localStorage.clear();
+
+			// vm.review = results
+			$state.go('listing')
 		})
 	}
+	vm.destroyReview = function(id, index){
+		console.log("pass destroy review")
+		userService.destroy($stateParams.id).success(function(response){
+			console.log(response)
+			vm.reviews.splice(index, 1)
+		})
+		console.log($stateParams)
+
+
+	}
+
 
 	}
 })()

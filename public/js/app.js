@@ -42,7 +42,7 @@
           controller: 'MainController as main'
         })
         .state('listing', {
-          url: '/listing',
+          url: '/listing/:id',
           templateUrl: '../partials/listing.html',
           controller: 'MainController as main'
         })
