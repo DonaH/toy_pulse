@@ -28,7 +28,15 @@
 * HTML5
 * CSS
 
----
+# Cool Factors
+* Able to pull in Bing Image API, set it at localstoragre, & retrieve from it then store at mlab. Therefore bypass the heroku clearing all images shortly after it's activated.
+
+# Issues
+* This is WIP
+* Delet not working currently.
+* Need to add update for reviews and user profiles.
+* Need to clear image in browser after review is saved 
+* 
 # Contacts
 * if you have questions please post it on github or contact me directly at my email <dona.hsieh@gmail.com>
 
