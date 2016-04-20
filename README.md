@@ -36,7 +36,7 @@
 * Delet not working currently.
 * Need to add update for reviews and user profiles.
 * Need to clear image in browser after review is saved 
-* 
+
 # Contacts
 * if you have questions please post it on github or contact me directly at my email <dona.hsieh@gmail.com>
 
