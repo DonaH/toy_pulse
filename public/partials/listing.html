@@ -15,7 +15,7 @@ templateUrl: '../partials/listing.html' -->
               <h6>Toy Name: {{r.toy_name}} </h6><br />
               <h6>This belongs to Boogerlist: {{r.boogerlist}} </h6><br />
               <h6>Reviewer: {{r.reviewer}} </h6><br />
-              <h6>Date: {{r.date}} </h6><br />
+              <h6>Date: {{r.date| date:'MM/dd/yyyy'}} </h6><br />
               <h6>Comment: {{r.comment}}</h6>
           </td>
         </tr>

@@ -7,36 +7,36 @@ templateUrl: '../partials/add_review.html' -->
   <h2>Add review of the star or booger toy!</h2>
 
     <!-- hold all reviews of the login user -->
-    <div class="container">
+    <div class="container" id="center">
       <h5>First, choose the photo.<br /></h5>
-      <h5>Then, click to add comment.</h5>
+      <h5>Then, save your comment!</h5>
       <br />
       <label for="search">Search for the name of the toy:</label>
-      <input type="text" id="search_term" />    <!-- capture user's search_term as query -->
+      <input type="text" id="search_term" ng-model="main.toy_name" />    <!-- capture user's search_term as query -->
       <button ng-click="main.getPhotos()">get Photos</button> <!-- on click, run the getPhotos function -->
-
     </div>
 
+  <div class="row" id="center">
+    <div class="inline-block">
+      <div class="thumb-container col s6" >
+        <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
 
-  <div class="row">
-    <div class="thumb-container col s6" >
-      <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
-
-        <a ng-click="main.choosePhoto(photo)" href target="_blank">
-          <img ng-src="{{photo.thumbnailUrl}}" class="thumb" />
-        </a>
+          <a ng-click="main.choosePhoto(photo)" href target="_blank">
+            <img ng-src="{{photo.thumbnailUrl}}" class="thumb" />
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="col s6 offset-8">
-      <img ng-src={{main.chosen}} />
-      <p align="center">
-        <!-- <button ng-click="main.gotoComment()">Add comment</button> -->
-      </p>
-
+    <div class="inline-block">
+      <div class="col s6">
+        <img ng-src={{main.chosen}} />
+      </div>
     </div>
+  </div>
 
  <!-- Here's the review details form -->
+  <div class="row" id="center">
     <form>
         <div class="switch">
           <label>
@@ -45,27 +45,19 @@ templateUrl: '../partials/add_review.html' -->
           <span class="lever"></span>
           Boogerlist</label>
         </div>
-
+        <br />
         <div>
-            <label for="toy name">Toy Name:</label>
-            <input ng-model="main.toy_name" type="text" id="toy_name" />
-        </div>
-        <div>
-            <label for="toy reviewer">Toy Reviewer:</label>
+            <label for="toy reviewer">Hey, Toy Reviewer! Type your name here:</label>
             <input ng-model="main.reviewer" type="text" id="toy_reviewer" />
         </div>
-        <!-- <div>
-            <label for="date">Date:</label>
-            <input ng-model="main.date" type="Date" id="date" />
-        </div> -->
+
         <div>
-            <label for="comment">What do you like about this toy?</label>
+            <label for="comment">Tell us what you think about this toy</label>
             <textarea ng-model="main.comment" id="comment"></textarea>
         </div>
         <button type="submit" ng-click="main.createReview()">Save my Review</button>
     </form>
-  <!-- End of review details form -->
-
   </div>
+  <!-- End of review details form -->
 
 </div>
