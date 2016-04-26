@@ -7,13 +7,15 @@ templateUrl: '../partials/listing.html' -->
 <ul ng-repeat="r in global.allReviews | orderBy: '-date'">
   <li>
     <div >
-      <table  style="width:90%"
+      <table style="width:90%" >
+
         <tr>
           <td><img width="300px" ng-src="{{r.img_url}}" class="clearfix float-my-children" ></td>
           <td>
               <h6>Toy Name: {{r.toy_name}} </h6><br />
               <h6>This belongs to Boogerlist: {{r.boogerlist}} </h6><br />
               <h6>Reviewer: {{r.reviewer}} </h6><br />
+              <h6>Date: {{r.date}} </h6><br />
               <h6>Comment: {{r.comment}}</h6>
           </td>
         </tr>

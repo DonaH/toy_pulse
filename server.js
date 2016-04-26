@@ -12,8 +12,8 @@ var config = require('./config'); // get our config file
 // var User   = require('./models/user'); // get our mongoose model
 var apiCtrl = require('./Controllers/api');
 var apiReviewCtrl = require('./Controllers/apiReview');
-var apiRoutes = require('./routes/api');
-var apiReviewRoutes = require('./routes/apiReview');
+var apiRouter = require('./routes/api');
+var apiReviewRouter = require('./routes/apiReview');
 
 var PORT = process.env.PORT || 3000
 mongoose.connect(config.database)
@@ -30,10 +30,10 @@ app.get('/', function(req,res){
   res.sendfile(__dirname + '/public/index.html')
 })
 
-app.use('/api', apiRoutes)
-app.use('/apiReview', apiReviewRoutes)
+app.use('/api', apiRouter)
+app.use('/apiReview', apiReviewRouter)
 
-apiRoutes.get('/', function(req,res){
+apiRouter.get('/', function(req,res){
   res.json({ message: 'Welcome to Toy Pulse!'})
 })
 

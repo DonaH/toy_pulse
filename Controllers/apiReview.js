@@ -1,5 +1,5 @@
 var
-	Review = require('../models/starlist.js'),
+	Review = require('../models/reviewList.js'),
   config = require('../config') // get our config file
 
 

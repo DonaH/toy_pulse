@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
-var starSchema = new Schema({
+var reviewSchema = new Schema({
   img_url: String,
   // rating: String,
   boogerlist: {type: Boolean, default:false},
@@ -12,6 +12,6 @@ var starSchema = new Schema({
   admin: Boolean
 })
 
-var Star = mongoose.model('Star', starSchema)
+var Review = mongoose.model('Review', reviewSchema)
 
-module.exports = Star
+module.exports = Review

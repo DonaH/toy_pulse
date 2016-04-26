@@ -31,11 +31,40 @@ templateUrl: '../partials/add_review.html' -->
     <div class="col s6 offset-8">
       <img ng-src={{main.chosen}} />
       <p align="center">
-        <button ng-click="main.gotoComment()">Add comment</button>
+        <!-- <button ng-click="main.gotoComment()">Add comment</button> -->
       </p>
 
     </div>
 
+ <!-- Here's the review details form -->
+    <form>
+        <div class="switch">
+          <label>
+          Starlist
+            <input type="checkbox" ng-model="main.isBooger"/>
+          <span class="lever"></span>
+          Boogerlist</label>
+        </div>
+
+        <div>
+            <label for="toy name">Toy Name:</label>
+            <input ng-model="main.toy_name" type="text" id="toy_name" />
+        </div>
+        <div>
+            <label for="toy reviewer">Toy Reviewer:</label>
+            <input ng-model="main.reviewer" type="text" id="toy_reviewer" />
+        </div>
+        <!-- <div>
+            <label for="date">Date:</label>
+            <input ng-model="main.date" type="Date" id="date" />
+        </div> -->
+        <div>
+            <label for="comment">What do you like about this toy?</label>
+            <textarea ng-model="main.comment" id="comment"></textarea>
+        </div>
+        <button type="submit" ng-click="main.createReview()">Save my Review</button>
+    </form>
+  <!-- End of review details form -->
 
   </div>
 

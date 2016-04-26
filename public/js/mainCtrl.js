@@ -51,16 +51,16 @@
 			var img_url = vm.chosen
 			$window.localStorage.setItem('img_url', img_url)
 		}
-		vm.gotoComment = function(){
-			$state.go('star')
-			// Load the img in localStorage to the next page: add_star.html
-			// window.onload = function() {
-			// 	var picutre = localStorage.getItem('img_url')
-			// 	var image = document.createElement('img');
-			// 	image.src = pictures;
-			// 	document.body.appendChild(image)
-			// }
-		}
+		// vm.gotoComment = function(){
+		// 	$state.go('review')
+		// 	// Load the img in localStorage to the next page: add_star.html
+		// 	// window.onload = function() {
+		// 	// 	var picutre = localStorage.getItem('img_url')
+		// 	// 	var image = document.createElement('img');
+		// 	// 	image.src = pictures;
+		// 	// 	document.body.appendChild(image)
+		// 	// }
+		// }
 
 		vm.loadTempPhoto = function(){
 			$window.localStorage.getItem('img_url');

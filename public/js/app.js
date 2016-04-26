@@ -31,16 +31,16 @@
           templateUrl: '../partials/add_review.html',
           controller: 'MainController as main'
         })
-        .state('star', {
-          url: '/star',
-          templateUrl: '../partials/add_star.html',
-          controller: 'MainController as main'
-        })
-        .state('booger', {
-          url: '/booger',
-          templateUrl: '../partials/add_booger.html',
-          controller: 'MainController as main'
-        })
+        // .state('star', {
+        //   url: '/star',
+        //   templateUrl: '../partials/add_star.html',
+        //   controller: 'MainController as main'
+        // })
+        // .state('booger', {
+        //   url: '/booger',
+        //   templateUrl: '../partials/add_booger.html',
+        //   controller: 'MainController as main'
+        // })
         .state('listing', {
           url: '/listing/:id',
           templateUrl: '../partials/listing.html',
