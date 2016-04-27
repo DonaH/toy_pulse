@@ -24,17 +24,28 @@
 
       <!-- Nav Bar -->
      <nav class="#ff9800 orange" role="navigation">
-       <div class="nav-wrapper">
-         <a ui-sref="home" class="brand-logo">Toy Pulse!</a>
-         <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <div class="nav-wrapper">
+        <a ui-sref="home" class="brand-logo">Toy Pulse!</a>
+
+        <a ui-sref="login" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a ui-sref="review">Review</a></li>
            <li><a ui-sref="listing" ng-click="global.allReview()">Listing</a></li>
            <li><a ui-sref="login">Login</a></li>
            <li><a ui-sref="newUser">Sign Up</a></li>
            <li><a ui-sref="logoff" ng-click="global.logout()">Logout</a></li>
-
          </ul>
-       </div>
+
+        <ul class="side-nav" id="mobile">
+          <li><a ui-sref="review">Review</a></li>
+          <li><a ui-sref="listing" ng-click="global.allReview()">Listing</a></li>
+          <li><a ui-sref="login">Login</a></li>
+          <li><a ui-sref="newUser">Sign Up</a></li>
+          <li><a ui-sref="logoff" ng-click="global.logout()">Logout</a></li>
+        </ul>
+
+      </div>
      </nav>
 
      <!-- Main Body using ui-view and partials-->
