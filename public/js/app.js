@@ -42,14 +42,15 @@
         //   controller: 'MainController as main'
         // })
         .state('listing', {
-          url: '/listing/:id',
-          templateUrl: '../partials/listing.html',
-          controller: 'MainController as main'
-        })
-        .state('list', {
           url: '/listing',
           templateUrl: '../partials/listing.html',
           controller: 'MainController as main'
+        })
+        .state('listdetail', {
+          url: '/listing/:id',
+          templateUrl: '../partials/listing.html',
+          controller: 'MainController as main'
+          // cache: false
         })
         .state('logoff', {
           url: '/logoff',

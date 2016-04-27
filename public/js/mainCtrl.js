@@ -62,14 +62,14 @@
 		// 	// }
 		// }
 
-		vm.loadTempPhoto = function(){
-			$window.localStorage.getItem('img_url');
-		   var picture = localStorage.getItem('img_url');
-		   var image = document.createElement('img');
-		   image.src = picture;
-		   document.body.appendChild(image);
-			//  localStorage.clear();
-		}
+		// vm.loadTempPhoto = function(){
+		// 	$window.localStorage.getItem('img_url');
+		//    var picture = localStorage.getItem('img_url');
+		//    var image = document.createElement('img');
+		//    image.src = picture;
+		//    document.body.appendChild(image);
+		// 	//  localStorage.clear();
+		// }
 
 	vm.createReview = function(){
 		vm.review = {
@@ -85,13 +85,19 @@
 		console.log(vm.review)
 		userService.review(vm.review).success(function(results){
 			console.log(results)
-				$state.go('list')
-			  localStorage.clear();
 
-			// vm.review = results
-
+				$state.go('listing')
 		})
+		//
+		// // $state.reload()
+		// window.location.href = $state.href('state.name', {param: 'value'});
+		// console.log("pass the window.location.href")
+		// // reload the page
+		// window.location.reload();
+
+	  localStorage.clear();
 	}
+
 	vm.destroyReview = function(id, index){
 		console.log("pass destroy review")
 		userService.destroy(id).success(function(response){
