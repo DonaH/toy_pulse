@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonaH/toy_pulse.git"
+  },
   "keywords": [
     "toy_pulse",
     "toy reviews",
@@ -15,8 +19,16 @@
   ],
   "author": "DonaH",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonaH/toy_pulse/issues"
+  },
+  "homepage": "https://github.com/DonaH/toy_pulse.git#readme",
   "dependencies": {
     "angular": "^1.5.3",
+    "angular-ui-router": "^1.0.0-alpha.3",
+    "bcrypt-nodejs": "^0.0.3",
+    "cors": "^2.7.1",
+    "dotenv": "^2.0.0",
     "body-parser": "^1.15.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
