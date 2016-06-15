@@ -35,7 +35,7 @@
 			console.log(query)
 
       $http({
-          url: "https://bingapis.azure-api.net/api/v5/images/search?q="+query+"&count=9&offset=0&mkt=en-us&safeSearch=Moderate",
+          url: "https://bingapis.azure-api.net/api/v5/images/search?q="+query+"&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
           headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
           type: "GET"
       })

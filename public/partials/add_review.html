@@ -3,7 +3,6 @@ templateUrl: '../partials/add_review.html' -->
 
 <!-- Add review -->
 
-<div class="container">
   <h2>Add review of the star or booger toy!</h2>
 
     <!-- hold all reviews of the login user -->
@@ -17,27 +16,35 @@ templateUrl: '../partials/add_review.html' -->
     </div>
 
   <div class="row" id="center">
-    <div class="inline-block">
-      <div class="thumb-container col s6" >
-        <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
+    <!-- <div class="inline-block"> -->
+      <div class="col s12">
+        <div class="thumb-container" >
+          <div class="ib" ng-repeat="photo in main.photos">   <!-- populate the thumbnails photos in a div -->
 
-          <a ng-click="main.choosePhoto(photo)" href target="_blank">
-            <img ng-src="{{photo.thumbnailUrl}}" class="thumb" />
-          </a>
+            <a ng-click="main.choosePhoto(photo)" href target="_blank">
+              <div class = "card">
+                <div class = "card-image">
+                  <img ng-src="{{photo.thumbnailUrl}}" class="thumb"/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
 
-    <div class="inline-block">
+    <!-- <div class="inline-block">
       <div class="col s6">
         <img ng-src={{main.chosen}} />
       </div>
-    </div>
+    </div> -->
   </div>
 
  <!-- Here's the review details form -->
   <div class="row" id="center">
-    <form>
+    <div class="col s12">
+      <img ng-src={{main.chosen}} />
+      <form>
         <div class="switch">
           <label>
           Starlist
@@ -56,8 +63,7 @@ templateUrl: '../partials/add_review.html' -->
             <textarea ng-model="main.comment" id="comment"></textarea>
         </div>
         <button type="submit" ng-click="main.createReview()">Save my Review</button>
-    </form>
+      </form>
+    </div>
   </div>
   <!-- End of review details form -->
-
-</div>

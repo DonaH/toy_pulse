@@ -37,19 +37,26 @@ h6{
   font-size: 12px;
 }
 
-.parallax-container {
+/*.parallax-container {
   height: "450";
-}
+}*/
 
 .thumb {
-  height: 100px;
-  display: inline-block;
+  max-height: 196px;
+  max-width: 196px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  border: 2px;
+  border-color: cyan;
 }
 
 .thumb-container {
-  width: 400px;
+  width: 100%;
 }
 
 .ib {
-  display: inline-block;
+  display:inline-block;
+  /*width: 100%;
+  height: auto;*/
 }
