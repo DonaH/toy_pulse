@@ -34,11 +34,18 @@
 			var query = document.getElementById("search_term").value
 			console.log(query)
 
-      $http({
-          url: "https://bingapis.azure-api.net/api/v5/images/search?q="+query+"&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
-          headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
-          type: "GET"
-      })
+      // $http({
+      //     url: "https://bingapis.azure-api.net/api/v5/images/search?q="+query+"&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
+      //     headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
+      //     type: "GET"
+      // })
+
+			$http({
+					url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q="+query+"&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
+					headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},
+					type: "GET"
+			})
+
       .then(function(result) {
           console.log(result.data.value);
 					vm.photos = result.data.value
