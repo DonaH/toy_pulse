@@ -38,14 +38,14 @@
 
             // $http({
             //     url: "https://bingapis.azure-api.net/api/v5/images/search?q="+query+"&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
-            //     headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"},3779186af95f4f0ca575dec9f51bc5a9, 08FDF5D43B472532A13A085101C8F7A0
+            //     headers:{"Ocp-Apim-Subscription-Key": "55b49e7ae0a746b6815daf77e691d04e"}
             //     type: "GET"
             // })
 
             $http({
                 url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
                 headers: {
-                    "Ocp-Apim-Subscription-Key": "08FDF5D43B472532A13A085101C8F7A0"
+                    "Ocp-Apim-Subscription-Key": "eebec0ecca2d44d4a98762c42a9c2947"
                 },
                 type: "GET"
             })
