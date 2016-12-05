@@ -45,7 +45,7 @@
             $http({
                 url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=12&offset=0&mkt=en-us&safeSearch=Moderate",
                 headers: {
-                    "Ocp-Apim-Subscription-Key": "eebec0ecca2d44d4a98762c42a9c2947"
+                    "Ocp-Apim-Subscription-Key": "836adba8eab8433ab38185d1dc8132b6"
                 },
                 type: "GET"
             })
