@@ -19,7 +19,7 @@ var PORT = process.env.PORT || 3000
 mongoose.connect(config.database)
 app.set('secret', config.secret)
 
-app.use(bodyParser.urlencoded({extended: false })) /// what is extended?
+app.use(bodyParser.urlencoded({extended: true })) /// what is extended?
 app.use(bodyParser.json())
 app.use(express.static('public'))
 
